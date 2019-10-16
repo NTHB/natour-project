@@ -1,0 +1,22 @@
+/* Global reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+
+    // 1 rem definition
+    font-size: 62.5%;
+
+    /* Using percentage to allow user browser setting to adjust the font-size and because default font-size is 16px = 100%, we need only 10px to do the trick so 62.5% = 10px is being used the reason is below. */
+
+    /* Declare font-size to 10px because it is easier to convert other size into rem unit and because of this, the root element font-size is now 10px. */
+}
+
+body {
+    box-sizing: border-box;
+}
