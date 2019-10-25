@@ -15,8 +15,26 @@ html {
     /* Using percentage to allow user browser setting to adjust the font-size and because default font-size is 16px = 100%, we need only 10px to do the trick so 62.5% = 10px is being used the reason is below. */
 
     /* Declare font-size to 10px because it is easier to convert other size into rem unit and because of this, the root element font-size is now 10px. */
+
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+
 }
 
 body {
     box-sizing: border-box;
+    padding: 3rem; /* 30px */
+
+    @include respond(tab-land) {
+        padding: 0;
+    }
 }
